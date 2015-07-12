@@ -38,4 +38,5 @@ function buyTPF() {
 
 window.setInterval(function(){
   performClick(elephants);
+  performClick(TPFs * 5);
 }, 1000);
