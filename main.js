@@ -1,5 +1,6 @@
 var peanuts = 0;
 var elephants = 0;
+var pps = 0;
 
 function performClick(num) {
   peanuts += num;
@@ -11,6 +12,8 @@ function buyElephant() {
   if(peanuts >= elephantCost) {
     elephants++;
     peanuts -= elephantCost;
+    pps++;
+    document.getElementById("pps").innerHTML = pps;
     document.getElementById("elephants").innerHTML = elephants;
     document.getElementById("elephantCost").innerHTML = elephantCost;
   };
