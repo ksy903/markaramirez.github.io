@@ -1,5 +1,6 @@
 var peanuts = 0;
 var elephants = 0;
+var TPFs = 0;
 var pps = 0;
 
 function performClick(num) {
@@ -19,6 +20,20 @@ function buyElephant() {
   };
   var nextCost = Math.floor(10 * Math.pow(1.1, elephants));
   document.getElementById("elephantCost").innerHTML = nextCost;
+};
+
+function buyTPF() {
+  var TPFCost = Math.floor(50 * Math.pow(1.1, TPFs));
+  if(peanuts >= TPFCost) {
+    TPFs++;
+    peanuts -= TPFCost;
+    pps += 5;
+    document.getElementById("pps").innerHTML = pps;
+    document.getElementById("TPFs").innerHTML = TPFs;
+    document.getElementById("TPFCost").innerHTML = TPFCost;
+  };
+  var nextCost = Math.floor(50 * Math.pow(1.1, TPFs));
+  document.getElementById("TPFCost").innerHTML = nextCost;
 };
 
 window.setInterval(function(){
