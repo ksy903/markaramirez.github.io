@@ -55,8 +55,12 @@ function deleteGame() {
   TPFs = 0;
   pps = 0;
   document.getElementById("pps").innerHTML = pps;
-  buyElephant();
-  buyTPF();
+  document.getElementById("elephants").innerHTML = elephants;
+  var nextCost = Math.floor(10 * Math.pow(1.1, elephants));
+  document.getElementById("elephantCost").innerHTML = nextCost;
+  document.getElementById("TPFs").innerHTML = TPFs;
+  nextCost = Math.floor(10 * Math.pow(1.1, TPFs));
+  document.getElementById("TPFCost").innerHTML = nextCost;
 }
 
 function roastedWP() {
