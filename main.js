@@ -44,7 +44,7 @@ function buyTPF() {
 function buyPMM() {
   var PMMCost = Math.floor(500 * Math.pow(1.1, PMMs));
   if(peanuts >= PMMCost) {
-    PPMs++;
+    PMMs++;
     peanuts -= PMMCost;
     pps += 50;
     document.getElementById("peanuts").innerHTML = peanuts;
