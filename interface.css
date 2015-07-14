@@ -1,6 +1,7 @@
 body {
-  color: #070854;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0c/Peanutjar.jpg");
+  <!-- background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0c/Peanutjar.jpg");
+   -->
+   background-color: #7ee7f7;
 }
 .strokeme {
   color: white;
