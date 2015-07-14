@@ -140,6 +140,9 @@ function loadGame() {
   if (typeof savegame.peanuts !== "undefined") peanuts = savegame.peanuts;
   if (typeof savegame.elephants !== "undefined") elephants = savegame.elephants;
   if (typeof savegame.TPFs !== "undefined") TPFs = savegame.TPFs;
+  if (typeof savegame.PFs !== "undefined") PFs = savegame.PFs;
+  if (typeof savegame.PMMs !== "undefined") PMMs = savegame.PMMs;
+  if (typeof savegame.farms !== "undefined") farms = savegame.farms;
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
   document.getElementById("pps").innerHTML = pps;
   document.getElementById("elephants").innerHTML = elephants;
