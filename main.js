@@ -87,7 +87,7 @@ function loadGame() {
 }
 
 window.onload = function() {
-  roastedWP();
+  shelledWP();
   loadGame();
 };
 
