@@ -32,7 +32,7 @@ function buyTPF() {
     TPFs++;
     peanuts -= TPFCost;
     pps += 5;
-    document.getElementById('hidden').style.display = 'block';
+    document.getElementById('hiddenTPF').style.display = 'block';
     document.getElementById("peanuts").innerHTML = peanuts;
     document.getElementById("pps").innerHTML = pps;
     document.getElementById("TPFs").innerHTML = TPFs;
@@ -42,16 +42,13 @@ function buyTPF() {
   document.getElementById("TPFCost").innerHTML = nextCost;
 };
 
-function showTPF() {
-
-}
-
 function buyPMM() {
   var PMMCost = Math.floor(500 * Math.pow(1.1, PMMs));
   if(peanuts >= PMMCost) {
     PMMs++;
     peanuts -= PMMCost;
     pps += 50;
+    document.getElementById('hiddenPMM').style.display = 'block';
     document.getElementById("peanuts").innerHTML = peanuts;
     document.getElementById("pps").innerHTML = pps;
     document.getElementById("PMMs").innerHTML = PMMs;
