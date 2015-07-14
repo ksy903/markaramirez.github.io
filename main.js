@@ -6,11 +6,6 @@ var pps = 0;
 function performClick(num) {
   peanuts += num;
   document.getElementById("peanuts").innerHTML = peanuts;
-  document.getElementById("pps").innerHTML = pps;
-  document.getElementById("elephants").innerHTML = elephants;
-  document.getElementById("elephantCost").innerHTML = elephantCost;
-  document.getElementById("TPFs").innerHTML = TPFs;
-  document.getElementById("TPFCost").innerHTML = TPFCost;
 };
 
 function buyElephant() {
@@ -75,6 +70,11 @@ function loadGame() {
   if (typeof savegame.elephants !== "undefined") elephants = savegame.elephants;
   if (typeof savegame.TPFs !== "undefined") TPFs = savegame.TPFs;
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
+  document.getElementById("pps").innerHTML = pps;
+  document.getElementById("elephants").innerHTML = elephants;
+  document.getElementById("elephantCost").innerHTML = elephantCost;
+  document.getElementById("TPFs").innerHTML = TPFs;
+  document.getElementById("TPFCost").innerHTML = TPFCost;
 }
 
 window.onload = function() {
