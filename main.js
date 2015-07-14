@@ -54,6 +54,11 @@ function deleteGame() {
   elephants = 0;
   TPFs = 0;
   pps = 0;
+  document.getElementById("pps").innerHTML = pps;
+  document.getElementById("elephants").innerHTML = elephants;
+  document.getElementById("elephantCost").innerHTML = elephantCost;
+  document.getElementById("TPFs").innerHTML = TPFs;
+  document.getElementById("TPFCost").innerHTML = TPFCost;
 }
 
 function roastedWP() {
