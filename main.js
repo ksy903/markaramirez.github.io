@@ -50,6 +50,10 @@ function saveGame() {
 
 function deleteGame() {
   localStorage.removeItem("save");
+  peanuts = 0;
+  elephants = 0;
+  TPFs = 0;
+  pps = 0;
 }
 
 function roastedWP() {
