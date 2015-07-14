@@ -40,12 +40,3 @@ window.setInterval(function(){
   performClick(elephants);
   performClick(TPFs * 5);
 }, 1000);
-
-window.setInterval(function()) {
-  document.getElementById("peanuts").innerHTML = peanuts;
-  document.getElementById("pps").innerHTML = pps;
-  document.getElementById("elephants").innerHTML = elephants;
-  document.getElementById("elephantCost").innerHTML = elephantCost;
-  document.getElementById("TPFs").innerHTML = TPFs;
-  document.getElementById("TPFCost").innerHTML = TPFCost;
-}, 100);
