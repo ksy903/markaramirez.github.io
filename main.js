@@ -56,9 +56,11 @@ function deleteGame() {
   pps = 0;
   document.getElementById("pps").innerHTML = pps;
   document.getElementById("elephants").innerHTML = elephants;
-  document.getElementById("elephantCost").innerHTML = elephantCost;
+  var nextCost = Math.floor(10 * Math.pow(1.1, elephants));
+  document.getElementById("elephantCost").innerHTML = nextCost;
   document.getElementById("TPFs").innerHTML = TPFs;
-  document.getElementById("TPFCost").innerHTML = TPFCost;
+  nextCost = Math.floor(10 * Math.pow(1.1, TPFs));
+  document.getElementById("TPFCost").innerHTML = nextCost;
 }
 
 function roastedWP() {
@@ -77,9 +79,11 @@ function loadGame() {
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
   document.getElementById("pps").innerHTML = pps;
   document.getElementById("elephants").innerHTML = elephants;
-  document.getElementById("elephantCost").innerHTML = elephantCost;
+  var nextCost = Math.floor(10 * Math.pow(1.1, elephants));
+  document.getElementById("elephantCost").innerHTML = nextCost;
   document.getElementById("TPFs").innerHTML = TPFs;
-  document.getElementById("TPFCost").innerHTML = TPFCost;
+  nextCost = Math.floor(10 * Math.pow(1.1, TPFs));
+  document.getElementById("TPFCost").innerHTML = nextCost;
 }
 
 window.onload = function() {
