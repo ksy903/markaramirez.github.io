@@ -6,6 +6,11 @@ var pps = 0;
 function performClick(num) {
   peanuts += num;
   document.getElementById("peanuts").innerHTML = peanuts;
+  document.getElementById("pps").innerHTML = pps;
+  document.getElementById("elephants").innerHTML = elephants;
+  document.getElementById("elephantCost").innerHTML = elephantCost;
+  document.getElementById("TPFs").innerHTML = TPFs;
+  document.getElementById("TPFCost").innerHTML = TPFCost;
 };
 
 function buyElephant() {
