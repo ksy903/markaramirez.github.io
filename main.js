@@ -46,6 +46,10 @@ function shelledWP() {
   document.body.style.background = "url('http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg')";
 }
 
+window.onload = function() {
+  roastedWP();
+};
+
 window.setInterval(function(){
   performClick(elephants);
   performClick(TPFs * 5);
