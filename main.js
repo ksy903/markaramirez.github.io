@@ -141,6 +141,10 @@ function solidWP() {
   document.body.style.background = "#2B1500";
 }
 
+function homemadeWP() {
+  document.body.style.background = "url('http://i.imgur.com/sWDwDRW.png')";
+}
+
 function loadGame() {
   var savegame = JSON.parse(localStorage.getItem("save"));
   if (typeof savegame.peanuts !== "undefined") peanuts = savegame.peanuts;
