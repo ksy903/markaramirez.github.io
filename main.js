@@ -136,7 +136,7 @@ function shelledWP() {
 }
 
 function solidWP() {
-  document.body.style.background = "#3D1E00";
+  document.body.style.background = "#AD8533";
 }
 
 function loadGame() {
