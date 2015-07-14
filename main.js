@@ -39,11 +39,11 @@ function buyTPF() {
 };
 
 function roastedWP() {
-  document.body.style.background = url("https://upload.wikimedia.org/wikipedia/commons/0/0c/Peanutjar.jpg");
+  document.body.style.background = "#ffffff url('https://upload.wikimedia.org/wikipedia/commons/0/0c/Peanutjar.jpg') no-repeat right top";
 }
 
 function shelledWP() {
-  document.body.style.background = url("http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg");
+  document.body.style.background = "#ffffff url('http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg') no-repeat right top;
 }
 
 window.setInterval(function(){
