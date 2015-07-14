@@ -14,6 +14,7 @@ function buyElephant() {
     elephants++;
     peanuts -= elephantCost;
     pps++;
+    document.getElementById("peanuts").innerHTML = peanuts;
     document.getElementById("pps").innerHTML = pps;
     document.getElementById("elephants").innerHTML = elephants;
     document.getElementById("elephantCost").innerHTML = elephantCost;
@@ -28,6 +29,7 @@ function buyTPF() {
     TPFs++;
     peanuts -= TPFCost;
     pps += 5;
+    document.getElementById("peanuts").innerHTML = peanuts;
     document.getElementById("pps").innerHTML = pps;
     document.getElementById("TPFs").innerHTML = TPFs;
     document.getElementById("TPFCost").innerHTML = TPFCost;
