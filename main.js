@@ -135,6 +135,10 @@ function shelledWP() {
   document.body.style.background = "url('http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg')";
 }
 
+function solidWP() {
+  document.body.style.background = "#7A3D00";
+}
+
 function loadGame() {
   var savegame = JSON.parse(localStorage.getItem("save"));
   if (typeof savegame.peanuts !== "undefined") peanuts = savegame.peanuts;
