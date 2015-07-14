@@ -32,6 +32,7 @@ function buyTPF() {
     TPFs++;
     peanuts -= TPFCost;
     pps += 5;
+    document.getElementById("imgTPF").innerHTML = "http://i.imgur.com/wwqKwJf.png";
     document.getElementById("peanuts").innerHTML = peanuts;
     document.getElementById("pps").innerHTML = pps;
     document.getElementById("TPFs").innerHTML = TPFs;
@@ -167,7 +168,7 @@ function loadGame() {
 }
 
 window.onload = function() {
-  shelledWP();
+  solidWP();
   loadGame();
 };
 
