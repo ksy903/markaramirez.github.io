@@ -142,7 +142,7 @@ function solidWP() {
 }
 
 function homemadeWP() {
-  document.body.style.background = "url('http://i.imgur.com/sWDwDRW.png')";
+  document.body.style.background = "url('http://i.imgur.com/ZLJBZnQ.png')";
 }
 
 function loadGame() {
