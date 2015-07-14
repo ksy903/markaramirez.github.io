@@ -1,6 +1,9 @@
 var peanuts = 0;
 var elephants = 0;
 var TPFs = 0;
+var PMMs = 0;
+var farms = 0;
+var PFs = 0;
 var pps = 0;
 
 function performClick(num) {
@@ -38,11 +41,59 @@ function buyTPF() {
   document.getElementById("TPFCost").innerHTML = nextCost;
 };
 
+function buyPMM() {
+  var PMMCost = Math.floor(500 * Math.pow(1.1, PMMs));
+  if(peanuts >= PMMCost) {
+    PPMs++;
+    peanuts -= PMMCost;
+    pps += 50;
+    document.getElementById("peanuts").innerHTML = peanuts;
+    document.getElementById("pps").innerHTML = pps;
+    document.getElementById("PMMs").innerHTML = PMMs;
+    document.getElementById("PMMCost").innerHTML = PMMCost;
+  };
+  var nextCost = Math.floor(500 * Math.pow(1.1, PMMs));
+  document.getElementById("PMMCost").innerHTML = nextCost;
+};
+
+function buyFarm() {
+  var farmCost = Math.floor(3000 * Math.pow(1.1, farms));
+  if(peanuts >= farmCost) {
+    farms++;
+    peanuts -= farmCost;
+    pps += 300;
+    document.getElementById("peanuts").innerHTML = peanuts;
+    document.getElementById("pps").innerHTML = pps;
+    document.getElementById("farms").innerHTML = farms;
+    document.getElementById("farmCost").innerHTML = farmCost;
+  };
+  var nextCost = Math.floor(3000 * Math.pow(1.1, farms));
+  document.getElementById("farmCost").innerHTML = nextCost;
+};
+
+function buyFactory() {
+  var PFCost = Math.floor(10000 * Math.pow(1.1, PFs));
+  if(peanuts >= PFCost) {
+    PFs++;
+    peanuts -= PFCost;
+    pps += 1000;
+    document.getElementById("peanuts").innerHTML = peanuts;
+    document.getElementById("pps").innerHTML = pps;
+    document.getElementById("PFs").innerHTML = PFs;
+    document.getElementById("PFCost").innerHTML = PFCost;
+  };
+  var nextCost = Math.floor(10000 * Math.pow(1.1, PFs));
+  document.getElementById("PFCost").innerHTML = nextCost;
+};
+
 function saveGame() {
   var save = {
     peanuts: peanuts,
     elephants: elephants,
     TPFs: TPFs,
+    farms: farms,
+    PFs: PFs,
+    PMMs: PMMs,
     pps: pps
   }
   localStorage.setItem("save",JSON.stringify(save));
@@ -53,6 +104,10 @@ function deleteGame() {
   peanuts = 0;
   elephants = 0;
   TPFs = 0;
+  farms = 0;
+  PFs = 0;
+  PMMs = 0;
+  farms = 0;
   pps = 0;
   document.getElementById("pps").innerHTML = pps;
   document.getElementById("elephants").innerHTML = elephants;
@@ -61,6 +116,15 @@ function deleteGame() {
   document.getElementById("TPFs").innerHTML = TPFs;
   nextCost = Math.floor(10 * Math.pow(1.1, TPFs));
   document.getElementById("TPFCost").innerHTML = nextCost;
+  document.getElementById("farms").innerHTML = farms;
+  nextCost = Math.floor(3000 * Math.pow(1.1, farms));
+  document.getElementById("farmCost").innerHTML = nextCost;
+  document.getElementById("PMMs").innerHTML = PMMs;
+  nextCost = Math.floor(500 * Math.pow(1.1, PMMs));
+  document.getElementById("PMMCost").innerHTML = nextCost;
+  document.getElementById("PFs").innerHTML = PFs;
+  nextCost = Math.floor(10000 * Math.pow(1.1, PFs));
+  document.getElementById("PFCost").innerHTML = nextCost;
 }
 
 function roastedWP() {
@@ -84,6 +148,15 @@ function loadGame() {
   document.getElementById("TPFs").innerHTML = TPFs;
   nextCost = Math.floor(10 * Math.pow(1.1, TPFs));
   document.getElementById("TPFCost").innerHTML = nextCost;
+  document.getElementById("farms").innerHTML = farms;
+  nextCost = Math.floor(3000 * Math.pow(1.1, farms));
+  document.getElementById("farmCost").innerHTML = nextCost;
+  document.getElementById("PMMs").innerHTML = PMMs;
+  nextCost = Math.floor(500 * Math.pow(1.1, PMMs));
+  document.getElementById("PMMCost").innerHTML = nextCost;
+  document.getElementById("PFs").innerHTML = PFs;
+  nextCost = Math.floor(10000 * Math.pow(1.1, PFs));
+  document.getElementById("PFCost").innerHTML = nextCost;
 }
 
 window.onload = function() {
@@ -94,5 +167,8 @@ window.onload = function() {
 window.setInterval(function(){
   performClick(elephants);
   performClick(TPFs * 5);
+  performClick(PMMs * 50);
+  performClick(farms * 300);
+  performClick(PFs * 1000);
   saveGame();
 }, 1000);
