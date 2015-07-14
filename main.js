@@ -38,6 +38,20 @@ function buyTPF() {
   document.getElementById("TPFCost").innerHTML = nextCost;
 };
 
+function saveGame() {
+  var save = {
+    peanuts: peanuts,
+    elephants: elephants,
+    TPFs: TPFs,
+    pps: pps
+  }
+  localStorage.setItem("save",JSON.stringify(save));
+}
+
+function deleteGame() {
+  localStorage.removeItem("save");
+}
+
 function roastedWP() {
   document.body.style.background = "url('https://upload.wikimedia.org/wikipedia/commons/0/0c/Peanutjar.jpg')";
 }
@@ -46,11 +60,21 @@ function shelledWP() {
   document.body.style.background = "url('http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg')";
 }
 
+function loadGame() {
+  var savegame = JSON.parse(localStorage.getItem("save"));
+  if (typeof savegame.peanuts !== "undefined") peanuts = savegame.peanuts;
+  if (typeof savegame.elephants !== "undefined") elephants = savegame.elephants;
+  if (typeof savegame.TPFs !== "undefined") TPFs = savegame.TPFs;
+  if (typeof savegame.pps !== "undefined") pps = savegame.pps;
+}
+
 window.onload = function() {
   roastedWP();
+  loadGame();
 };
 
 window.setInterval(function(){
   performClick(elephants);
   performClick(TPFs * 5);
+  saveGame();
 }, 1000);
