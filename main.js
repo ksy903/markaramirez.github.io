@@ -43,7 +43,7 @@ function roastedWP() {
 }
 
 function shelledWP() {
-  document.body.style.background = "#ffffff url('http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg') no-repeat right top;
+  document.body.style.background = "#ffffff url('http://www.bioag.novozymes.com/en/products/unitedstates/PublishingImages/Peanuts.jpg') no-repeat right top";
 }
 
 window.setInterval(function(){
