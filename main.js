@@ -5,7 +5,7 @@ var PMMs = 0;
 var farms = 0;
 var PFs = 0;
 var pps = 0;
-var sound = 1;
+var ts = 1;
 
 function performClick(num) {
   peanuts += num;
@@ -13,16 +13,16 @@ function performClick(num) {
 };
 
 function toggleSound() {
-  if(sound == 1) {
-    sound = 0;
+  if(ts == 1) {
+    ts = 0;
   }
   else {
-    sound = 1;
+    ts = 1;
   }
 }
 
 function playGP() {
-  if(sound == 1) {
+  if(ts == 1) {
     var sound = new Audio("gpsound.wav");
     sound.play();
     sound.currentTime = 0;
