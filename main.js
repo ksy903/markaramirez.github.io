@@ -11,6 +11,12 @@ function performClick(num) {
   document.getElementById("peanuts").innerHTML = peanuts;
 };
 
+function playGP() {
+  var sound = new Audio("gpsound.wav");
+  sound.play();
+  sound.currentTime = 0;
+}
+
 function buyElephant() {
   var elephantCost = Math.floor(10 * Math.pow(1.1, elephants));
   if(peanuts >= elephantCost) {
