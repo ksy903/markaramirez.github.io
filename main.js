@@ -5,16 +5,28 @@ var PMMs = 0;
 var farms = 0;
 var PFs = 0;
 var pps = 0;
+var sound = 1;
 
 function performClick(num) {
   peanuts += num;
   document.getElementById("peanuts").innerHTML = peanuts;
 };
 
+function toggleSound() {
+  if(sound == 1) {
+    sound = 0;
+  }
+  else {
+    sound = 1;
+  }
+}
+
 function playGP() {
-  var sound = new Audio("gpsound.wav");
-  sound.play();
-  sound.currentTime = 0;
+  if(sound == 1) {
+    var sound = new Audio("gpsound.wav");
+    sound.play();
+    sound.currentTime = 0;
+  }
 }
 
 function buyElephant() {
