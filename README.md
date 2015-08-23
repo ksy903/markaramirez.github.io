@@ -8,3 +8,5 @@ This repo also hosts:
   
   
   * "Work for Peanuts!" - A web-based incremental/idle game
+  
+  * A physics learning application to drill in concepts
