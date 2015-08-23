@@ -11,8 +11,8 @@
         <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
       </div>
       <ul>
-        <li><a href="#">Gravity</a></li>
-        <li><a href="#">Projectiles</a></li>
+        <li><a href="#">Projectiles Simulation</a></li>
+        <li><div class ="equationlink"><a href="#">Equation Calculators</a></div></li>
         <li><div class ="formula"><a href="#">Formulas</a></div></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -21,6 +21,32 @@
       <div class="icon-menu">
         <i class="fa fa-bars"></i>
         Menu
+      </div>
+      <div class="start">
+        <h1 style="color: white; text-align: center">Hello! Use the menu on the left to navigate to other lessons.</h1>
+      </div>
+      <div class="equations">
+      <form class="form-inline" id="lugeq">
+        <h2>Law of Universal Gravitation (Enter a "?" for missing coefficient)</h2>
+        <div class="form-group">
+          <label for="flug">Force of Gravity Coefficient</label>
+          <input type="text" class="form-control" id="flug" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="molug">Mass One Coefficient</label>
+          <input type="text" class="form-control" id="molug" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="mtlug">Mass Two Coefficient</label>
+          <input type="text" class="form-control" id="mtlug" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="rlug">Radius Coefficient</label>
+          <input type="text" class="form-control" id="rlug" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <button type="submit" class="btn btn-default" id="lug">Compute Missing Coefficient</button>
+      </form>
+      <p>The missing coefficient is <span id="result">?</span></p>
       </div>
       <div class ="fsheet">
         <iframe scrolling ="yes" src="http://docs.google.com/gview?url=https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-physics-1-equations-table.pdf&embedded=true"
