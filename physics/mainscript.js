@@ -52,7 +52,6 @@ var main = function() {
   });
 
   $('#lug').on('click', function(event) {
-    alert("gello");
     event.preventDefault();
     $("#lugeq").submit()
   });
@@ -64,8 +63,9 @@ var main = function() {
       var r = parseInt($('#rlug').val(), 10) * 3;
       var m1 = parseInt($('#molug').val(), 10) * 3;
       var m2 = parseInt($('#mtlug').val(), 10) * 3;
-      result = 6.674 * Math.pow(10, -11) * m1 * m2 / (Math.pow(r, 2));
+      result = (6.674 * Math.pow(10, -11)) * m1 * m2 / (Math.pow(r, 2));
       result /= 3;
+      alert(result);
     }
   });
 };
