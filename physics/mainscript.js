@@ -57,7 +57,6 @@ var main = function() {
   });
 
   $('#lugeq').submit(function(event) {
-    alert("Handler for .submit() called.");
     event.preventDefault();
     if($('#flug').val() == "?") {
       var r = parseInt($('#rlug').val(), 10) * 3;
