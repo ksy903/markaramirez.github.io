@@ -64,8 +64,9 @@ var main = function() {
       var m1 = parseInt($('#molug').val(), 10) * 3;
       var m2 = parseInt($('#mtlug').val(), 10) * 3;
       result = (6.674 * Math.pow(10, -11)) * m1 * m2 / (Math.pow(r, 2));
-      result /= 3;
-      alert(result);
+      var thresult = (6.674 * Math.pow(10, -11)) * 3 * 3 / (Math.pow(3, 2));
+      result /= thresult;
+      alert("The missing coefficient is " + result);
     }
   });
 };
