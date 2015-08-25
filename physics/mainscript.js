@@ -65,6 +65,9 @@ var main = function() {
       result = (6.674 * Math.pow(10, -11)) * m1 * m2 / (Math.pow(r, 2));
       var thresult = (6.674 * Math.pow(10, -11)) * 3 * 3 / (Math.pow(3, 2));
       result /= thresult;
+      if(Math.abs(Math.round(result) - result) < .0001) {
+        result = Math.round(result);
+      }
       alert("The missing coefficient is " + result);
     }
   });
