@@ -68,8 +68,41 @@ var main = function() {
       if(Math.abs(Math.round(result) - result) < .0001) {
         result = Math.round(result);
       }
-      alert("The missing coefficient is " + result);
     }
+    if($('#molug').val() == "?") {
+      var r = parseInt($('#rlug').val(), 10) * 3;
+      var f = parseInt($('#flug').val(), 10) * 3;
+      var m2 = parseInt($('#mtlug').val(), 10) * 3;
+      result = (f * r * r) / ((6.674 * Math.pow(10, -11)) * m2);
+      var thresult = (3 * 3 * 3) / ((6.674 * Math.pow(10, -11)) * 3);
+      result /= thresult;
+      if(Math.abs(Math.round(result) - result) < .0001) {
+        result = Math.round(result);
+      }
+    }
+    if($('#rlug').val() == "?") {
+      var f = parseInt($('#flug').val(), 10) * 3;
+      var m1 = parseInt($('#molug').val(), 10) * 3;
+      var m2 = parseInt($('#mtlug').val(), 10) * 3;
+      result = ((6.674 * Math.pow(10, -11)) * m1 * m2) / f;
+      var thresult = ((6.674 * Math.pow(10, -11)) * 3 * 3) / 3;
+      result /= thresult;
+      if(Math.abs(Math.round(result) - result) < .0001) {
+        result = Math.round(result);
+      }
+    }
+    if($('#mtlug').val() == "?") {
+      var r = parseInt($('#rlug').val(), 10) * 3;
+      var m1 = parseInt($('#molug').val(), 10) * 3;
+      var f = parseInt($('#flug').val(), 10) * 3;
+      result = (f * r * r) / ((6.674 * Math.pow(10, -11)) * m1);
+      var thresult = (3 * 3 * 3) / ((6.674 * Math.pow(10, -11)) * 3);
+      result /= thresult;
+      if(Math.abs(Math.round(result) - result) < .0001) {
+        result = Math.round(result);
+      }
+    }
+    alert("The missing coefficient is " + result);
   });
 };
 
