@@ -7,11 +7,9 @@ var result = 0;
 var main = function() {
   $('.icon-menu').click(function() {
     $('.start').hide();
-
     $('.menu').animate({
       left: "0px"
     }, 200);
-
     $('body').animate({
       left: "285px"
     }, 200);
@@ -21,7 +19,6 @@ var main = function() {
     $('.menu').animate({
       left: "-285px"
     }, 200);
-
     $('body').animate({
       left: "0px"
     }, 200);
@@ -29,11 +26,9 @@ var main = function() {
 
   $('.formula').click(function() {
       $('.fsheet').toggle();
-
       $('.menu').animate({
         left: "-285px"
       }, 200);
-
       $('body').animate({
         left: "0px"
       }, 200);
@@ -41,11 +36,19 @@ var main = function() {
 
   $('.equationlink').click(function() {
       $('.equations').toggle();
-
       $('.menu').animate({
         left: "-285px"
       }, 200);
+      $('body').animate({
+        left: "0px"
+      }, 200);
+  });
 
+  $('.contactlink').click(function() {
+      $('.contactsheet').toggle();
+      $('.menu').animate({
+        left: "-285px"
+      }, 200);
       $('body').animate({
         left: "0px"
       }, 200);
@@ -110,5 +113,6 @@ var main = function() {
 $(document).ready( function(){
   $('.fsheet').hide();
   $('.equations').hide();
+  $('.contactsheet').hide();
   main();
 });
