@@ -1,5 +1,6 @@
 var ts = 1;
 var nt = 0;
+var za = 0;
 
 function toggleSound() {
   if(ts == 1) {
@@ -32,6 +33,20 @@ var main = function() {
   $('.thievinglink').click(function() {
       $('.thieving').toggle();
   });
+
+  $('.zammylink').click(function() {
+      $('.zammy').toggle();
+      if(za == 1) {
+        za = 0;
+      }
+      else {
+        za = 1;
+      }
+  });
+
+  $('.magiclink').click(function() {
+      $('.magic').toggle();
+  });
 };
 
 window.setInterval(function(){
@@ -42,12 +57,23 @@ window.setInterval(function(){
 }, 15000);
 
 window.setInterval(function(){
+  if(za == 1){
+    $('.zammypopup').toggle();
+    playGP();
+  }
+}, 30000);
+
+window.setInterval(function(){
   $('.nathiefpopup').hide();
+  $('.zammypopup').hide();
 }, 3000);
 
 $(document).ready( function(){
   $('.nathiefpopup').hide();
   $('.nathief').hide();
   $('.thieving').hide();
+  $('.zammypopup').hide();
+  $('.zammy').hide();
+  $('.magic').hide();
   main();
 });
