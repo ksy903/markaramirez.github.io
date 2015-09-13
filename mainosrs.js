@@ -19,7 +19,7 @@ function playGP() {
 }
 
 var main = function() {
-  $('.natthieflink').click(function() {
+  $('.nathieflink').click(function() {
       $('.nathief').toggle();
       if(nt == 1) {
         nt = 0;
