@@ -39,7 +39,7 @@ window.setInterval(function(){
     $('.nathiefpopup').toggle();
     playGP();
   }
-}, 8000);
+}, 15000);
 
 window.setInterval(function(){
   $('.nathiefpopup').hide();
