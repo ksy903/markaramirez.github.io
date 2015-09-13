@@ -43,7 +43,7 @@ window.setInterval(function(){
 
 window.setInterval(function(){
   $('.nathiefpopup').hide();
-}, 1000);
+}, 3000);
 
 $(document).ready( function(){
   $('.nathiefpopup').hide();
