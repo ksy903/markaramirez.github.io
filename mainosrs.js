@@ -53,6 +53,9 @@ window.setInterval(function(){
   if(nt == 1){
     $('.nathiefpopup').toggle();
     playGP();
+    setTimeout(function(){
+      $('.nathiefpopup').hide();
+    }, 3000);
   }
 }, 15000);
 
@@ -60,13 +63,11 @@ window.setInterval(function(){
   if(za == 1){
     $('.zammypopup').toggle();
     playGP();
+    setTimeout(function(){
+      $('.zammypopup').hide();
+    }, 3000);
   }
 }, 30000);
-
-window.setInterval(function(){
-  $('.nathiefpopup').hide();
-  $('.zammypopup').hide();
-}, 3000);
 
 $(document).ready( function(){
   $('.nathiefpopup').hide();
