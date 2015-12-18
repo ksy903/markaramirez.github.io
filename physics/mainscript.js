@@ -4,6 +4,13 @@ var molug = "1";
 var rlug = "1";
 var result = 0;
 
+var dist = "?";
+var time = "?";
+var vi = "?";
+var vf = "?";
+var accel = "?";
+
+
 var main = function() {
   $('.icon-menu').click(function() {
     $('.start').hide();
@@ -36,6 +43,16 @@ var main = function() {
 
   $('.equationlink').click(function() {
       $('.equations').toggle();
+      $('.menu').animate({
+        left: "-285px"
+      }, 200);
+      $('body').animate({
+        left: "0px"
+      }, 200);
+  });
+
+  $('.kinematicslink').click(function() {
+      $('.kinematics').toggle();
       $('.menu').animate({
         left: "-285px"
       }, 200);
@@ -113,6 +130,7 @@ var main = function() {
 $(document).ready( function(){
   $('.fsheet').hide();
   $('.equations').hide();
+  $('.kinematics').hide();
   $('.contactsheet').hide();
   main();
 });

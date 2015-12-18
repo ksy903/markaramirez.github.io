@@ -11,8 +11,9 @@
         <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
       </div>
       <ul>
-        <li><a href="#">Projectiles Simulation</a></li>
-        <li><div class ="equationlink"><a href="#">Equation Calculators</a></div></li>
+        <!-- <li><a href="#">Projectiles Simulation</a></li> -->
+        <li><div class ="kinematicslink"><a href="#">Kinematics</a></div></li>
+        <li><div class ="equationlink"><a href="#">Equation Coefficient Calculators</a></div></li>
         <li><div class ="formula"><a href="#">Formulas</a></div></li>
         <li><div class "contactlink"><a href="#">Contact</a></div></li>
       </ul>
@@ -25,29 +26,59 @@
       <div class="start">
         <h1 style="color: white; text-align: center">Hello! Use the menu on the left to navigate to other lessons.</h1>
       </div>
+      <!-- THIS STARTS EQUATIONS FORM -->
       <div class="equations">
       <form class="form-inline" id="lugeq">
         <h2>Law of Universal Gravitation (Enter a "?" for missing coefficient)</h2>
         <div class="form-group">
-          <label for="flug">Force of Gravity Coefficient</label>
+          <label for="flug">Force of Gravity Coefficient: </label>
           <input type="text" class="form-control" id="flug" placeholder="Enter a number or a &quot;?&quot;">
         </div>
         <div class="form-group">
-          <label for="molug">Mass One Coefficient</label>
+          <label for="molug">Mass One Coefficient: </label>
           <input type="text" class="form-control" id="molug" placeholder="Enter a number or a &quot;?&quot;">
         </div>
         <div class="form-group">
-          <label for="mtlug">Mass Two Coefficient</label>
+          <label for="mtlug">Mass Two Coefficient: </label>
           <input type="text" class="form-control" id="mtlug" placeholder="Enter a number or a &quot;?&quot;">
         </div>
         <div class="form-group">
-          <label for="rlug">Radius Coefficient</label>
+          <label for="rlug">Radius Coefficient: </label>
           <input type="text" class="form-control" id="rlug" placeholder="Enter a number or a &quot;?&quot;">
         </div>
         <button type="submit" class="btn btn-default" id="lug">Compute Missing Coefficient</button>
       </form>
       <!-- <p>The missing coefficient is <span id="result">?</span></p> -->
       </div>
+      <!-- THIS ENDS EQUATIIONS AND STARTS KINEMATICS -->
+      <div class="kinematics">
+      <form class="form-inline" id="bigfive">
+        <h2>KINEMATICS - CONSTANT ACCELERATION (Enter a "?" for up to 2 missing variables)</h2>
+        <div class="form-group">
+          <label for="dist">Displacement: </label>
+          <input type="text" class="form-control" id="dist" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="vi">Initial Velocity: </label>
+          <input type="text" class="form-control" id="vi" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="vf">Final Velocity: </label>
+          <input type="text" class="form-control" id="vf" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="accel">Acceleration: </label>
+          <input type="text" class="form-control" id="accel" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <div class="form-group">
+          <label for="time">Time: </label>
+          <input type="text" class="form-control" id="time" placeholder="Enter a number or a &quot;?&quot;">
+        </div>
+        <button type="submit" class="btn btn-default" id="lug">Compute 2 Missing Variables</button>
+      </form>
+      <!-- <p>The missing coefficient is <span id="result">?</span></p> -->
+      </div>
+      <!-- THIS ENDS KINEMATICS -- >
       <div class ="fsheet">
         <iframe scrolling ="yes" src="http://docs.google.com/gview?url=https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-physics-1-equations-table.pdf&embedded=true"
         style="width: 99%; height: 99%;" frameborder="0"></iframe>
