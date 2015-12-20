@@ -14,7 +14,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url('http://users.wpi.edu/~drdewalt/photos/physics-blackboard.jpg');
+  background-image: url('http://www.actsofvolition.com/images/screenshots/background.png');
   height: 100%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -31,7 +31,7 @@ body {
 
 .menu li {
   border-bottom: 1px solid #636366;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   line-height: 45px;
   padding-bottom: 3px;
   padding-left: 20px;
@@ -54,7 +54,7 @@ body {
 .icon-menu {
   color: #fff;
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   padding-bottom: 25px;
   padding-left: 25px;
