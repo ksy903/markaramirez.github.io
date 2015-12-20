@@ -1,0 +1,110 @@
+.container {
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 50px;
+  font-size: 16px;
+}
+/* Show "Left" drawer for the "Right" drawer in the demo */
+.snapjs-right .snap-drawer-left {
+	display: block;
+	right: 0;
+	left: auto;
+}
+
+/* Hide the actual "Right" drawer in the demo */
+.snapjs-right .snap-drawer-right {
+	display: none;
+}
+
+/* Show the "Drag" background in the demo */
+#content {
+	background: #6B7A9C;
+}
+
+/* Demo toolbar styles */
+#toolbar {
+  background: #536080;
+  border-bottom: 1px solid #111b32;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 44px;
+}
+
+#toolbar h1 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #C6C9CF;
+  font-size: 26px;
+  line-height: 22px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  right: 44px;
+  left: 44px;
+  width: auto;
+  height: 44px;
+}
+
+#open-left {
+  background: url("http://apw.org.nz/wp-content/uploads/2015/02/APW-Responsive-Menu-ICON.png") center center no-repeat;
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+/* Default demo styles */
+.snap-content {
+  background: #BFC7D8;
+}
+
+.snap-drawers {
+  background: #364059;
+}
+
+.snap-drawer {
+	background: #364059;
+	color: #eee;
+}
+
+.snap-drawer h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 15px;
+}
+
+.snap-drawer h4 {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0;
+}
+
+.snap-drawer ul {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.snap-drawer li > a {
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #000;
+  text-decoration: none;
+  color: #ccc;
+  text-indent: 20px;
+}
+
+.snap-drawer p {
+  font-family: 'Ubuntu', sans-serif;
+  opacity: 0.5;
+  padding: 15px;
+  font-size: 12px;
+}
