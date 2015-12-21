@@ -29,14 +29,14 @@
   right: 0;
   left: 0;
   width: auto;
-  height: 54px;
+  height: 44px;
 }
 
 #toolbar h1 {
   font-family: 'Ubuntu', sans-serif;
   color: #C6C9CF;
   font-size: 26px;
-  line-height: 22px;
+  line-height: 8px;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
   position: absolute;
