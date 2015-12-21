@@ -78,24 +78,39 @@
                 <canvas id="canvas" width="600" height="400" style="background-color:#000000;" ></canvas>
               </div>
                 <div class = "tex">
-                <ul>
-                  <li>
-                    Angle in Degrees: <input type="text" value="1" size="3" id="angle"></input>
-                  </li>
-                  <li>
-                    Impulse: <input type="text" value="1" size="3" id="force"></input>
-                  </li>
-                  <li>
-                    Acceleration due to Gravity: <input type="text" value="9.8" size = "3" id = "gravity"></input>
-                  </li>
-                  <li>
-                    Density of Ball: <input type="text" value="1" size = "3" id = "density"></input>
-                  </li>
-                  <li>
-                    Bounciness: <input type="text" value="0.2" size = "3" id = "res"></input>
-                  </li>
-                </ul>
-                <h5>Note: Any value over <var>1</var> for bounciness will give unrealistic results.</h5>
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr class="info">
+                          <th>Variable</th>
+                          <th>Input</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class = "info">
+                          <td>Angle in Degrees</td>
+                          <td><input type="text" value="1" size="3" id="angle"></input></td>
+                        </tr>
+                        <tr class = "info">
+                          <td>Impulse</td>
+                          <td><input type="text" value="1" size="3" id="force"></input></td>
+                        </tr>
+                        <tr class = "info">
+                          <td>Acceleration due to Gravity</td>
+                          <td><input type="text" value="9.8" size = "3" id = "gravity"></input></td>
+                        </tr>
+                        <tr class = "info">
+                          <td>Density of Ball</td>
+                          <td><input type="text" value="1" size = "3" id = "density"></input></td>
+                        </tr>
+                        <tr class = "info">
+                          <td>Bounciness</td>
+                          <td><input type="text" value="0.2" size = "3" id = "res"></input></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                <h5>Note: Any value over <var>1</var> for <var>bounciness</var> will give unrealistic results.</h5>
                 <input type="submit" value="Launch!" onclick="launch()"></input>
                 <input type="submit" value="Reset" onclick="reset()"></input>
                 <p><small>Credit goes to Box2d creator Erin Catto and the ApplyImpulse() implementation by Seth Ladd.</small></p>
