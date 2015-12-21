@@ -3,7 +3,7 @@ var fixDef, bodyDef;
 var removeBall = false;
 
 function create(){
-    
+
     var b2Vec2 = Box2D.Common.Math.b2Vec2,
     b2BodyDef = Box2D.Dynamics.b2BodyDef,
     b2Body = Box2D.Dynamics.b2Body,
@@ -14,13 +14,13 @@ function create(){
     b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape,
     b2CircleShape = Box2D.Collision.Shapes.b2CircleShape,
     b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
-    
+
     window.requestAnimFrame = (function(){
-          return  window.requestAnimationFrame       || 
-                  window.webkitRequestAnimationFrame || 
-                  window.mozRequestAnimationFrame    || 
-                  window.oRequestAnimationFrame      || 
-                  window.msRequestAnimationFrame     || 
+          return  window.requestAnimationFrame       ||
+                  window.webkitRequestAnimationFrame ||
+                  window.mozRequestAnimationFrame    ||
+                  window.oRequestAnimationFrame      ||
+                  window.msRequestAnimationFrame     ||
                   function(callback, element){
                     window.setTimeout(callback, 1000 / 60);
                   };
@@ -35,8 +35,8 @@ function create(){
     fixDef.density = 1.0;
     fixDef.friction = 0.5;
     fixDef.restitution = 0.2;
-    
-    
+
+
     //floor - body
     bodyDef = new b2BodyDef;
     bodyDef.type = b2Body.b2_staticBody;
@@ -58,9 +58,9 @@ function create(){
     ballFix.shape = new b2CircleShape(0.5);
     ballBody.position.Set(1.2, 9);
     world.CreateBody(ballBody).CreateFixture(ballFix);
-    
+
     window.setInterval(update, 1000 / 60);
-         
+
     var debugDraw = new b2DebugDraw();
 	debugDraw.SetSprite(document.getElementById("canvas").getContext("2d"));
 	debugDraw.SetDrawScale(30.0);
@@ -68,7 +68,7 @@ function create(){
 	debugDraw.SetLineThickness(1.0);
 	debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
 	world.SetDebugDraw(debugDraw);
-    
+
 }
 
 var update = function update(){
@@ -76,12 +76,9 @@ var update = function update(){
     if(removeBall){
         world.DestroyBody(world.GetBodyList());
         var density = document.getElementById("density").value;
-        var friction = document.getElementById("friction").value;
         var res = document.getElementById("res").value;
         ballFix.density = density;
-        ballFix.friction = friction;
         ballFix.restitution = res;
-        fixDef.friction = friction;
         world.CreateBody(ballBody).CreateFixture(ballFix);
         removeBall = false;
     }
