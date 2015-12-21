@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <script src="jquery-1.4.3.min.js"></script>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
@@ -12,8 +13,11 @@
     <link rel="stylesheet" type="text/css" href="mainsss.css"/>
     <link rel="stylesheet" type="text/css" href="snap.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="jqmath-0.4.3.css">
+    <link rel="stylesheet" type="text/css" href="simsty.css"/>
+    <script src="jqmath-etc-0.4.3.min.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onload="create();">
     <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left">
                 <div>
@@ -65,12 +69,39 @@
         <div id="content" class="snap-content">
             <div id="toolbar">
                 <a href="#" id="open-left"></a>
-                <h1>Home</h1>
+                <h1>Simulations</h1>
             </div>
             <div class="container">
-            <h2>Welcome to Mark and Jae's Study Place!</h2>
-              <p>Click the <mark>&#9776</mark> icon to the left and choose a subject from the menu to start cramming some material.</p>
+              <h3>Projectile Simulation:</h3>
+              <div class = "can">
+                <canvas id="canvas" width="600" height="400" style="background-color:#000000;" ></canvas>
+              </div>
+                <div class = "tex">
+                <ul>
+                  <li>
+                    Angle in Degrees: <input type="text" value="1" size="3" id="angle"></input>
+                  </li>
+                  <li>
+                    Impulse: <input type="text" value="1" size="3" id="force"></input>
+                  </li>
+                  <li>
+                    Acceleration due to Gravity: <input type="text" value="9.8" size = "3" id = "gravity"></input>
+                  </li>
+                  <li>
+                    Density of Ball: <input type="text" value="1" size = "3" id = "density"></input>
+                  </li>
+                  <li>
+                    Bounciness: <input type="text" value="0.2" size = "3" id = "res"></input>
+                  </li>
+                </ul>
+                <h5>Note: Any value over <var>1</var> for bounciness will give unrealistic results.</h5>
+                <input type="submit" value="Launch!" onclick="launch()"></input>
+                <input type="submit" value="Reset" onclick="reset()"></input>
+                <p><small>Credit goes to Box2d creator Erin Catto and the ApplyImpulse() implementation by Seth Ladd.</small></p>
+              </div>
             </div>
+        <br>
+        <p>
         </div>
         <script type="text/javascript" src="snap.js"></script>
         <script type="text/javascript">
@@ -84,4 +115,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="mainjs.js"></script>
   </body>
+  <script type="text/javascript" src="Box2d.min.js"></script>
+  <script src="simulation.js"></script>
 </html>
