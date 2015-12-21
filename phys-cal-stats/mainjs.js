@@ -14,3 +14,10 @@ addEvent(document.getElementById('open-left'), 'click', function(){
     }
 
 });
+
+$(document).ready(function(){
+	$("#pcat").toggle();
+	$("#plink").click(function() {
+		$("#pcat").toggle();
+	});
+});
